@@ -1,0 +1,157 @@
+
+
+
+
+
+<app-breadcrumb [title]="'Prescription'"  [active_item]="'Prescription'"></app-breadcrumb>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="invoice" id="htmlData">
+              <br>
+            <div>
+              <div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="media">
+                      <div class="media-left"><img class="media-object img-60" src="assets/images/banner/logo1.png" alt=""></div>
+                      <div class="media-body m-l-20">
+                        <h4 class="media-heading">Thooriga Hospital</h4>
+                        <p>hello@Thooriga.in<br><span>289-335-6503</span></p>
+                      </div>
+                    </div>
+                    <!-- End Info-->
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-md-right">
+                        <h6><i class="fa fa-location-arrow"></i> Hospital Location</h6><span>B69 Near Schoool Demo Home</span>
+                    </div>
+                    <!-- End Title-->
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <!-- End InvoiceTop-->
+              <!-- <div class="row">
+                <div class="col-md-4">
+                  <div class="media">
+                    <div class="media-left"><img class="media-object rounded-circle img-60" src="assets/images/banner/11.png" alt=""></div>
+                    <div class="media-body m-l-20">
+                      <h4 class="media-heading">Johan Deo</h4>
+                      <p>JohanDeo@gmail.com<br><span>555-555-5555</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="text-md-right" id="project">
+                    <h6>Project Description</h6>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                  </div>
+                </div>
+              </div> -->
+              <div class="row">
+                <div class="col-sm-6 col-lg-4 order-sm-1 order-xl-0">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="ttl-info ">
+                        <p><b>Issued: May</b><span> 27, 2015</span><br>                                                           
+
+                        <!-- <h6><i class="fa fa-envelope"></i>Email</h6><span>Marekjecno@yahoo.com</span> -->
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="ttl-info ">
+                        <h6><i class="fa fa-calendar"></i>Age: </h6><span>32</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 order-sm-0 order-xl-1">
+                  <div class="user-designation">
+                    <div class="title"><h2>Mark jecno</h2></div>
+                    <!-- <div class="desc mt-2">Patient</div> -->
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 order-sm-2 order-xl-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="ttl-info text-left">
+                        <h6><i class="fa fa-phone"></i>Contact Us</h6><span>India +91 123-456-7890</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="ttl-info text-right">
+                        <h6><i class="fa fa-location-arrow"></i>Location</h6><span>B69 Near Schoool Demo Home</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <!-- End Invoice Mid-->
+              <div>
+                <div class="table-responsive invoice-table" id="table">
+                  <table class="table table-bordered table-striped">
+                    <tbody>
+                      <tr>
+                        <td class="item">
+                          <h6 class="p-2 mb-0"> Description</h6>
+                        </td>
+                        <td class="Hours">
+                          <h6 class="p-2 mb-0">Days Qunatity</h6>
+                        </td>
+                        <td class="Rate">
+                          <h6 class="p-2 mb-0">Night Qunatity</h6>
+                        </td>
+                        <td class="subtotal">
+                          <h6 class="p-2 mb-0">Amount</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>Lorem Ipsum</label>
+                          <p class="m-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </td>
+                        <td>
+                          <p class="itemtext">5</p>
+                        </td>
+                        <td>
+                          <p class="itemtext">2</p>
+                        </td>
+                        <td>
+                          <p class="itemtext">375.00</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="Rate">
+                          <h6 class="mb-0 p-2">Total</h6>
+                        </td>
+                        <td class="payment">
+                          <h6 class="mb-0 p-2">$375.00</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- End Table-->
+                
+              <!-- End InvoiceBot-->
+            </div>
+            
+            <!-- End Invoice-->
+            <!-- End Invoice Holder-->
+          </div>
+          
+        </div>
+        <div class="col-sm-12 text-center mt-3">
+            <button class="btn btn btn-primary mr-2" type="button" onclick="javascript:window.print();">Print</button>
+            <button class="btn btn-secondary"(click)="openPDF()" type="button">Report Download</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

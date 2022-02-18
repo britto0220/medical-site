@@ -1,0 +1,194 @@
+<app-breadcrumb [title]="'View Patient'" [items]="['Ui Kits']" [active_item]="'Breadcrumb'"></app-breadcrumb>
+
+<div class="container-fluid" >
+    <div class="user-profile">
+      <div class="row">
+        <!-- user profile first-style start-->
+        <div class="col-sm-12">
+          <div class="card hovercard text-center">
+            <div class="cardheader"></div>
+            <div class="user-image">
+              <div class="avatar"><img alt="" [src]="url? url:'assets/images/banner/11.png'"></div>
+              <div class="icon-wrapper"><i class="icofont icofont-pencil-alt-5"><input class="upload" type="file"
+                    (change)="readUrl($event)" /></i></div>
+            </div>
+            <div class="info"id="htmlData">
+              <div class="row">
+                <div class="col-sm-6 col-lg-4 order-sm-1 order-xl-0">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="ttl-info text-left">
+                        <h6><i class="fa fa-envelope"></i>   Email</h6><span>Marekjecno@yahoo.com</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="ttl-info text-left">
+                        <h6><i class="fa fa-calendar"></i>   BOD</h6><span>02 January 1988</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 order-sm-0 order-xl-1">
+                  <div class="user-designation">
+                    <div class="title"><a target="_blank" href="">Mark jecno</a></div>
+                    <div class="desc mt-2">Patient</div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 order-sm-2 order-xl-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="ttl-info text-left">
+                        <h6><i class="fa fa-phone"></i>   Contact Us</h6><span>India +91 123-456-7890</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="ttl-info text-left">
+                        <h6><i class="fa fa-location-arrow"></i>   Location</h6><span>B69 Near Schoool Demo Home</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <h4 class="card-title mb-0">Past Visit History</h4>
+              <button  style="float:right;" (click)="popup()"  type="button" class="btn btn-primary my-2 btn-icon-text">
+                Update Checkup
+              </button> 
+            <!-- <button  style="float: right;" (click)="openPDF()" type="button" class="btn btn-primary my-2 btn-icon-text">
+               Report Download
+              </button>  -->
+              <!-- <button type="button" class="btn btn-primary my-2 btn-icon-text" onclick="javascript:window.print();"> Print </button> -->
+
+              <div class="table-responsive">
+                <table class="table card-table table-vcenter text-nowrap ">
+                    <thead>
+                        <tr>
+                            <!-- <th>Project Name</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Price</th>
+                            <th></th> -->
+                            <th >Date</th>
+                      <th >Doctor</th>
+                      <th >Treatment</th>
+                      <th >Charges</th>
+                      <!-- <th >Action</th> -->
+                      <!-- <th >Last Visit</th> -->
+                       <th style="text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                            <td>20 Dec 2021</td>
+                            <td>Dr.Thooriga</td>
+                            <td>fever</td>
+                            <td>28 </td>
+                            <!-- <td><i class="fa fa-phone-square"></i> 4588789798</td> -->
+                            <!-- <td>fdsfdsfdsfsdfdsfdsfdsfsdfdsfdfds</td> -->
+                            <td ><a class="icon" href="javascript:void(0)"></a>
+                                <!-- <a
+                                    class="btn btn-primary btn-sm" href="javascript:void(0)"><i class="fa fa-eye"></i>
+                                    View</a><a class="icon" href="javascript:void(0)"></a>&nbsp; -->
+                                    <a
+                                    class="btn btn-primary  btn-sm" href="javascript:void(0)"(click)="popup()" ><i class="fa fa-link"></i>
+                                    Update</a>
+                                    <!-- <a class="icon" href="javascript:void(0)"></a><a class="btn btn-danger btn-sm"
+                                    href="javascript:void(0)"><i class="fa fa-trash"></i> Delete</a> -->
+                            </td>
+                        </tr>
+                        <tr >
+                            <td>20 Dec 2021</td>
+                            <td>Dr.Thooriga</td>
+                            <td>fever</td>
+                            <td>28 </td>
+                            <!-- <td><i class="fa fa-phone-square"></i> 4588789798</td> -->
+                            <!-- <td>fdsfdsfdsfsdfdsfdsfdsfsdfdsfdfds</td> -->
+                            <td ><a class="icon" href="javascript:void(0)"></a>
+                                <!-- <a
+                                    class="btn btn-primary btn-sm" href="javascript:void(0)"><i class="fa fa-eye"></i>
+                                    View</a><a class="icon" href="javascript:void(0)"></a>&nbsp; -->
+                                    <a
+                                    class="btn btn-primary  btn-sm" href="javascript:void(0)"(click)="popup()" ><i class="fa fa-link"></i>
+                                    Update</a>
+                                    <!-- <a class="icon" href="javascript:void(0)"></a><a class="btn btn-danger btn-sm"
+                                    href="javascript:void(0)"><i class="fa fa-trash"></i> Delete</a> -->
+                            </td>
+                        </tr>
+                        <tr >
+                            <td>20 Dec 2021</td>
+                            <td>Dr.Thooriga</td>
+                            <td>fever</td>
+                            <td>28 </td>
+                            <!-- <td><i class="fa fa-phone-square"></i> 4588789798</td> -->
+                            <!-- <td>fdsfdsfdsfsdfdsfdsfdsfsdfdsfdfds</td> -->
+                            <td ><a class="icon" href="javascript:void(0)"></a>
+                                <!-- <a
+                                    class="btn btn-primary btn-sm" href="javascript:void(0)"><i class="fa fa-eye"></i>
+                                    View</a><a class="icon" href="javascript:void(0)"></a>&nbsp; -->
+                                    <a
+                                    class="btn btn-primary  btn-sm" href="javascript:void(0)"(click)="popup()" ><i class="fa fa-link"></i>
+                                    Update</a>
+                                    <!-- <a class="icon" href="javascript:void(0)"></a><a class="btn btn-danger btn-sm"
+                                    href="javascript:void(0)"><i class="fa fa-trash"></i> Delete</a> -->
+                            </td>
+                        </tr>
+                        <tr >
+                            <td>20 Dec 2021</td>
+                            <td>Dr.Thooriga</td>
+                            <td>fever</td>
+                            <td>28 </td>
+                            <!-- <td><i class="fa fa-phone-square"></i> 4588789798</td> -->
+                            <!-- <td>fdsfdsfdsfsdfdsfdsfdsfsdfdsfdfds</td> -->
+                            <td ><a class="icon" href="javascript:void(0)"></a>
+                                <!-- <a
+                                    class="btn btn-primary btn-sm" href="javascript:void(0)"><i class="fa fa-eye"></i>
+                                    View</a><a class="icon" href="javascript:void(0)"></a>&nbsp; -->
+                                    <a
+                                    class="btn btn-primary  btn-sm" href="javascript:void(0)"(click)="popup()" ><i class="fa fa-link"></i>
+                                    Update</a>
+                                    <!-- <a class="icon" href="javascript:void(0)"></a><a class="btn btn-danger btn-sm"
+                                    href="javascript:void(0)"><i class="fa fa-trash"></i> Delete</a> -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+              <!-- <div class="social-media">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><i class="fa fa-rss"></i></a></li>
+                </ul>
+              </div>
+              <div class="follow">
+                <div class="row">
+                  <div class="col-6 text-md-right border-right">
+                    <div class="follow-num" [CountTo]="25869" [from]="0" [duration]="5"></div><span>Follower</span>
+                  </div>
+                  <div class="col-6 text-md-left">
+                    <div class="follow-num counter" [CountTo]="659887" [from]="0" [duration]="5"></div>
+                    <span>Following</span>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+<!-- <div class="card">
+<div class="card-body">
+<div class="row align-items-center">
+    <div class="col-md-4">
+        <img alt="avatar"src="../../assets/images/banner/welcome.png">
+    </div>
+    <div class="col-md-8">
+    <h4 class="font-20 weight-500 mb-2">Welcome back</h4>
+        <div class="weight-600 font-30 col-blue pt-1">
+Sarah Smith!</div>
+<p class="font-18 max-width-600">We would like to take this opportunity to welcome you to our practice and to thank you for choosing our physicians to participate in your healthcare. We look forward to providing you with personalized, comprehensive health care focusing on wellness and prevention.
+</p>
+</div>
+</div>
+</div>
+</div> -->

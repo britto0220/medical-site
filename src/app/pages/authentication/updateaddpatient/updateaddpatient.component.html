@@ -1,0 +1,97 @@
+<h4 class="card-title mb-0"> Update Checkup</h4>
+<hr>
+<div class="card card-aside custom-card">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card-body">
+                <form [formGroup]="loginForm" (ngsubmit)="onSubmit()"  novalidate>
+                    <div class="row">
+                        
+                       
+                        
+                        
+                        <div class="col-md-6 col-sm-12">
+                            <label>Blood Group 
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group ">
+                                <ng-select [items]="blood" placeholder="Select"
+                class="js-example-placeholder-multiple" [(ngModel)]="gen"></ng-select>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Gender
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group ">
+                              
+                            <ng-select [items]="gender" placeholder="Select"
+                class="js-example-placeholder-multiple" [(ngModel)]="gen"></ng-select>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-12">
+                            <label>Injury/Condition
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group">
+                                <input type="text-area" formControlName="Injury" class="form-control"
+                                    />
+                                    <div class="errors"
+                                    *ngIf="loginForm.get('Injury').invalid && (loginForm.get('Injury').touched || loginForm.get('Injury').dirty)">
+                      
+                                    <div *ngIf="loginForm.get('Injury').hasError('required')">
+                                      Injury is required
+                                    </div>
+                                    
+                                    <div *ngIf="loginForm.get('Injury').errors.pattern">
+                                      This is not a valid Injury!!! </div>
+                      
+                      
+                                  </div> 
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-12">
+                            <label>Add Note
+                            </label>
+                            <div class="form-group">
+                                <!-- <input type="text"  class="form-control"
+                                     /> -->
+                                     <textarea class="form-control"formControlName="addnote" rows="5" cols="5"
+                                            placeholder="Default textarea"></textarea>
+                                     <div class="errors"
+                                     *ngIf="loginForm.get('addnote').invalid && (loginForm.get('addnote').touched || loginForm.get('addnote').dirty)">
+                       
+                                     <div *ngIf="loginForm.get('addnote').hasError('required')">
+                                       Addnote is required
+                                     </div>
+                                     
+                                     <div *ngIf="loginForm.get('addnote').errors.pattern">
+                                       This is not a valid Addnote!!! </div>
+                       
+                       
+                                   </div> 
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 text-right m-t-20">
+                            <button type="submit" id="system_submit" class="btn btn-primary"(click)="gotopatient()">Save</button>&nbsp;
+                            <!-- <button type="submit" class="btn btn-primary" (click)="user()"
+                                >Save</button> -->
+                                <button type="submit" id="system_submit" class="btn btn-primary"(click)="closeModelBox()">Close</button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    
+</div>

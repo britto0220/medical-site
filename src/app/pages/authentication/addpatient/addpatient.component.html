@@ -1,0 +1,227 @@
+<app-breadcrumb [title]="'Add Patient'" [items]="['Ui Kits']" [active_item]="'Breadcrumb'"></app-breadcrumb>
+
+
+
+<div class="card card-aside custom-card">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card-body">
+
+                <form [formGroup]="loginForm" (ngsubmit)="onSubmit()"  novalidate>
+                    <div class="row">
+                        
+                       
+                        <div class="col-md-6 col-sm-12">
+                            <label>User Name
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group">
+                                <input type="text" formControlName="username" class="form-control"
+                                   />
+                                   <div class="errors"
+                                   *ngIf="loginForm.get('username').invalid && (loginForm.get('username').touched || loginForm.get('username').dirty)">
+                     
+                                   <div *ngIf="loginForm.get('username').hasError('required')">
+                                     username is required
+                                   </div>
+                                   
+                                   <div *ngIf="loginForm.get('username').errors.pattern">
+                                     This is not a valid username!!! </div>
+                     
+                     
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Email
+                                <span class="tx-danger">*</span>
+                            </label>
+                            
+                            <div class="form-group">
+                                <input type="text" formControlName="email" class="form-control"
+                                    />
+                                    <div class="errors"
+                                    *ngIf="loginForm.get('email').invalid && (loginForm.get('email').touched || loginForm.get('email').dirty)">
+                      
+                                    <div *ngIf="loginForm.get('email').hasError('required')">
+                                      Email is required
+                                    </div>
+                                    
+                                    <div *ngIf="loginForm.get('email').errors.pattern">
+                                      This is not a valid Email!!! </div>
+                      
+                      
+                                  </div> 
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-12">
+                            <label>Mobile
+                                <span class="tx-danger">*</span>
+
+                            </label>
+                           
+                            <!-- <input type="text" formControlName="mobile"class="form-control" [ngClass]="{ 'is-invalid': submitted && loginFormControl.email.errors }" /> -->
+                            <div class="form-group">
+                                <ngx-intl-tel-input [preferredCountries]="[CountryISO.UnitedArabEmirates, CountryISO.India]"
+                                [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+                                [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                                [selectedCountryISO]="CountryISO.India" [phoneValidation]="true" name="phone" formControlName="mobile">
+                              </ngx-intl-tel-input>
+                              <div class="errors"
+                              *ngIf="loginForm.get('mobile').invalid && (loginForm.get('mobile').touched || loginForm.get('mobile').dirty)">
+                
+                              <div *ngIf="loginForm.get('mobile').hasError('required')">
+                                mobile is required
+                              </div>
+                              
+                              <div *ngIf="loginForm.get('mobile').errors.pattern">
+                                This is not a valid mobile!!! </div>
+                
+                
+                            </div> 
+                            </div>
+                        </div>
+                       
+                        <div class="col-md-6 col-sm-12">
+                            <label>Date of Birth
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group">
+                                <input type="date" formControlName="dob" class="form-control"
+                                     />
+                                     <div class="errors"
+                                     *ngIf="loginForm.get('dob').invalid && (loginForm.get('dob').touched || loginForm.get('dob').dirty)">
+                       
+                                     <div *ngIf="loginForm.get('dob').hasError('required')">
+                                       dob is required
+                                     </div>
+                                     
+                                     <div *ngIf="loginForm.get('dob').errors.pattern">
+                                       This is not a valid dob!!! </div>
+                       
+                       
+                                   </div> 
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-12">
+                            <label>Blood Group 
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group ">
+                                <ng-select [items]="blood" placeholder="Select"
+                class="js-example-placeholder-multiple" [(ngModel)]="gen"></ng-select>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Gender
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group ">
+                              
+                            <ng-select [items]="gender" placeholder="Select"
+                class="js-example-placeholder-multiple" [(ngModel)]="gen"></ng-select>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Age
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group">
+                                <input type="number" formControlName="age" class="form-control"
+                                    />
+                                    <div class="errors"
+                                    *ngIf="loginForm.get('age').invalid && (loginForm.get('age').touched || loginForm.get('age').dirty)">
+                      
+                                    <div *ngIf="loginForm.get('age').hasError('required')">
+                                      age is required
+                                    </div>
+                                    
+                                    <div *ngIf="loginForm.get('age').errors.pattern">
+                                      This is not a valid age!!! </div>
+                      
+                      
+                                  </div> 
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Injury/Condition
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group">
+                                <input type="text" formControlName="Injury" class="form-control"
+                                    />
+                                    <div class="errors"
+                                    *ngIf="loginForm.get('Injury').invalid && (loginForm.get('Injury').touched || loginForm.get('Injury').dirty)">
+                      
+                                    <div *ngIf="loginForm.get('Injury').hasError('required')">
+                                      Injury is required
+                                    </div>
+                                    
+                                    <div *ngIf="loginForm.get('Injury').errors.pattern">
+                                      This is not a valid Injury!!! </div>
+                      
+                      
+                                  </div> 
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Address
+                                <span class="tx-danger">*</span>
+                            </label>
+                            <div class="form-group">
+                                <input type="text" formControlName="address" class="form-control"
+                                    />
+                                    <div class="errors"
+                                    *ngIf="loginForm.get('address').invalid && (loginForm.get('address').touched || loginForm.get('address').dirty)">
+                      
+                                    <div *ngIf="loginForm.get('address').hasError('required')">
+                                      Address is required
+                                    </div>
+                                    
+                                    <div *ngIf="loginForm.get('address').errors.pattern">
+                                      This is not a valid Address!!! </div>
+                      
+                      
+                                  </div> 
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label>Add Note
+                            </label>
+                            <div class="form-group">
+                                <input type="text" formControlName="addnote" class="form-control"
+                                     />
+                                     <div class="errors"
+                                     *ngIf="loginForm.get('addnote').invalid && (loginForm.get('addnote').touched || loginForm.get('addnote').dirty)">
+                       
+                                     <div *ngIf="loginForm.get('addnote').hasError('required')">
+                                       Addnote is required
+                                     </div>
+                                     
+                                     <div *ngIf="loginForm.get('addnote').errors.pattern">
+                                       This is not a valid Addnote!!! </div>
+                       
+                       
+                                   </div> 
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 text-right m-t-20">
+                            <button type="submit" id="system_submit" class="btn btn-primary">Save</button>
+                            <!-- <button type="submit" class="btn btn-primary" (click)="user()"
+                                >Save</button> -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
